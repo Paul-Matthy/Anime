@@ -1,0 +1,746 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --red: #E50914;
+    --black: #000000;
+    --light-color: #181818;
+    --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+}
+
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #00000031;
+    padding: 1rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10000;
+    backdrop-filter: blur(.5em);
+}
+
+header .logo {
+    color: var(--red);
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+header .logo i {
+    color: var(--red);
+}
+
+header .navbar a {
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    color: #FFF;
+}
+
+header .navbar a.active,
+header .navbar a:hover {
+    color: #FFF;
+    background: var(--red);
+}
+
+.icons {
+    display: flex;
+}
+
+header .icons i {
+    cursor: pointer;
+    margin-left: .5rem;
+    height: 4.5rem;
+    width: 4.5rem;
+    font-size: 2.5rem;
+    color: #FFF;
+    border-radius: 50%;
+    background: var(--red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .icons i:hover {
+    color: var(--red);
+    background: #FFF;
+    transform: rotate(360deg);
+}
+
+header .icons #menu-bars {
+    display: none;
+}
+
+/* home section style start */
+
+.home {
+    padding: 0;
+}
+
+.home .box {
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    background-size: cover !important;
+    background-position: center !important;
+    justify-content: flex-end;
+    padding: 2rem 9%;
+}
+
+.home .swiper-wrapper {
+    display: flex;
+    /* overflow-x: scroll; */
+}
+
+.home .swiper-slide {
+    min-width: 100%;
+}
+
+.home .box {
+    justify-content: flex-start;
+}
+
+.home .box.second {
+    justify-content: flex-end;
+}
+
+.home .first {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.284), rgba(0, 0, 0, 0.264)), url(../Anime/Kakeguri.jpg);
+}
+
+.home .second {
+    background: url(../Img/image1.jpg);
+}
+
+.home .third {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.284), rgba(0, 0, 0, 0.264)), url(../Anime/spy\ x\ family.jpg);
+}
+
+.home .fourth {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.951), rgba(0, 0, 0, 0.628), rgba(0, 0, 0, 0.063), rgba(0, 0, 0, 0.063)), url(../Anime/jjk.jpg);
+}
+
+.home .fifth {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.284), rgba(0, 0, 0, 0.264)), url(../Img/image3-uzumaki-naruto-shippuuden-minimalism-4k-ou.jpg);
+}
+
+
+.home .sixth {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.288), rgba(0, 0, 0, 0.242)), url(../Img/image4-one-punch-man-4k-of.jpg);
+}
+
+.home .box .content {
+    width: 50rem;
+}
+
+.home .box .content h3 {
+    font-size: 6rem;
+    color: #FFF;
+    text-transform: uppercase;
+}
+
+.home .box .content p {
+    line-height: 2;
+    color: #FFF;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    padding: .8rem 3rem;
+    color: #FFF;
+    background: var(--red);
+}
+
+.btn:hover {
+    background: var(--black);
+    color: var(--red);
+}
+
+/* anime section style start */
+
+.anime {
+    background: var(--light-color);
+    padding: 5rem;
+    /* width: 100%; */
+}
+
+.heading {
+    text-align: left;
+    color: var(--red);
+    margin-bottom: 3rem;
+    font-size: 4rem;
+}
+
+.anime .swiper-wrapper {
+    display: flex;
+    gap: 30px;
+    /* overflow-x: scroll; */
+    /* width: 100%; */
+    /* background: aqua; */
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.anime .swiper-slide:hover h3::after {
+    width: 100%;
+}
+
+.anime .box {
+    width: 250px;
+    height: 168px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    background-size: cover !important;
+    background-position: center !important;
+    transition: .5s;
+}
+
+.anime .box:hover {
+    transform: scale(1.02);
+}
+
+.anime .content h3 {
+    margin-top: .5rem;
+    font-size: 1.7rem;
+    color: #FFF;
+    text-transform: uppercase;
+    position: relative;
+    height: 4rem;
+}
+
+.swiper-slide .content h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5%;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background: var(--red);
+    transition: .5s;
+}
+
+.anime .content p {
+    margin-top: .9rem;
+    font-size: 1.2rem;
+    color: #FFF;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+/* action section style start */
+
+.action {
+    background: var(--light-color);
+    padding: 5rem;
+}
+
+.action .swiper-wrapper {
+    display: flex;
+    gap: 30px;
+    /* overflow-x: scroll; */
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.action .swiper-slide:hover h3::after {
+    width: 100%;
+}
+
+.action .box {
+    width: 250px;
+    height: 168px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    background-size: cover !important;
+    background-position: center !important;
+    transition: .5s;
+}
+
+.action .box:hover {
+    transform: scale(1.02);
+}
+
+.action .content h3 {
+    margin-top: .5rem;
+    font-size: 1.7rem;
+    color: #FFF;
+    text-transform: uppercase;
+    position: relative;
+    height: 4rem;
+}
+
+.swiper-slide .content h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5%;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background: var(--red);
+    transition: .5s;
+}
+
+.action .content p {
+    margin-top: .9rem;
+    font-size: 1.2rem;
+    color: #FFF;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+/* child section style start */
+
+.child {
+    background: var(--light-color);
+    padding: 5rem;
+}
+
+.child .swiper-wrapper {
+    display: flex;
+    gap: 30px;
+    /* overflow-x: scroll; */
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.child .swiper-slide:hover h3::after {
+    width: 100%;
+}
+
+.child .box {
+    width: 250px;
+    height: 168px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    background-size: cover !important;
+    background-position: center !important;
+    transition: .5s;
+}
+
+.child .box:hover {
+    transform: scale(1.02);
+}
+
+.child .content h3 {
+    margin-top: .5rem;
+    font-size: 1.7rem;
+    color: #FFF;
+    text-transform: uppercase;
+    position: relative;
+    height: 4rem;
+}
+
+.child .content p {
+    margin-top: .9rem;
+    font-size: 1.2rem;
+    color: #FFF;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+
+
+/* family section stlye start */
+
+.family {
+    background: var(--light-color);
+    padding: 5rem;
+}
+
+.family .swiper-wrapper {
+    display: flex;
+    gap: 30px;
+    /* overflow-x: scroll; */
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.family .swiper-slide:hover h3::after {
+    width: 100%;
+}
+
+.family .box {
+    width: 250px;
+    height: 168px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    background-size: cover !important;
+    background-position: center !important;
+    transition: .5s;
+}
+
+.family .box:hover {
+    transform: scale(1.02);
+}
+
+.family .content h3 {
+    margin-top: .5rem;
+    font-size: 1.7rem;
+    color: #FFF;
+    text-transform: uppercase;
+    position: relative;
+    height: 4rem;
+}
+
+.family .content p {
+    margin-top: .9rem;
+    font-size: 1.2rem;
+    color: #FFF;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+/* isekai section stlye start */
+
+.isekai {
+    background: var(--light-color);
+    padding: 5rem;
+}
+
+.isekai .swiper-wrapper {
+    display: flex;
+    gap: 30px;
+    /* overflow-x: scroll; */
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.isekai .swiper-slide:hover h3::after {
+    width: 100%;
+}
+
+.isekai .box {
+    width: 250px;
+    height: 168px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    background-size: cover !important;
+    background-position: center !important;
+    transition: .5s;
+}
+
+.isekai .box:hover {
+    transform: scale(1.02);
+}
+
+.isekai .content h3 {
+    margin-top: .5rem;
+    font-size: 1.7rem;
+    color: #FFF;
+    text-transform: uppercase;
+    position: relative;
+    height: 4rem;
+}
+
+.isekai .content p {
+    margin-top: .9rem;
+    font-size: 1.2rem;
+    color: #FFF;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+/* harem section stlye start */
+
+.harem {
+    background: var(--light-color);
+    padding: 5rem;
+}
+
+.harem .swiper-wrapper {
+    display: flex;
+    gap: 30px;
+    /* overflow-x: scroll; */
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.harem .swiper-slide:hover h3::after {
+    width: 100%;
+}
+
+.harem .box {
+    width: 250px;
+    height: 168px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    background-size: cover !important;
+    background-position: center !important;
+    transition: .5s;
+}
+
+.harem .box:hover {
+    transform: scale(1.02);
+}
+
+.harem .content h3 {
+    /* background: aqua; */
+    margin-top: .5rem;
+    font-size: 1.7rem;
+    color: #FFF;
+    text-transform: uppercase;
+    position: relative;
+    height: 4rem;
+}
+
+.harem .content p {
+    margin-top: .9rem;
+    font-size: 1.2rem;
+    color: #FFF;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+/* romance section stlye start */
+
+.romance {
+    background: var(--light-color);
+    padding: 5rem;
+}
+
+.romance .swiper-wrapper {
+    display: flex;
+    gap: 30px;
+    /* overflow-x: scroll; */
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.romance .swiper-slide:hover h3::after {
+    width: 100%;
+}
+
+.romance .box {
+    width: 250px;
+    height: 168px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    background-size: cover !important;
+    background-position: center !important;
+    transition: .5s;
+}
+
+.romance .box:hover {
+    transform: scale(1.02);
+}
+
+.romance .content h3 {
+    margin-top: .5rem;
+    font-size: 1.7rem;
+    color: #FFF;
+    text-transform: uppercase;
+    position: relative;
+    height: 4rem;
+}
+
+.romance .content p {
+    margin-top: .9rem;
+    font-size: 1.2rem;
+    color: #FFF;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+/* sport section stlye start */
+
+.sport {
+    background: var(--light-color);
+    padding: 5rem;
+}
+
+.sport .swiper-wrapper {
+    display: flex;
+    gap: 30px;
+    /* overflow-x: scroll; */
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.sport .swiper-slide:hover h3::after {
+    width: 100%;
+}
+
+.sport .box {
+    width: 250px;
+    height: 168px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    background-size: cover !important;
+    background-position: center !important;
+    transition: .5s;
+}
+
+.sport .box:hover {
+    transform: scale(1.02);
+}
+
+.sport .content h3 {
+    margin-top: .5rem;
+    font-size: 1.7rem;
+    color: #FFF;
+    text-transform: uppercase;
+    position: relative;
+    height: 4rem;
+}
+
+.sport .content p {
+    margin-top: .9rem;
+    font-size: 1.2rem;
+    color: #FFF;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media query */
+@media screen and (max-width:991px) {
+    html {
+        font-size: 55%;
+    }
+
+    header {
+        padding: 1rem 2rem;
+    }
+}
+
+@media screen and (max-width:768px) {
+    header .icons #menu-bars {
+        display: flex;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--black);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        border-bottom: .1rem solid rgba(0, 0, 0, .2);
+        padding: 1rem;
+        clip-path: circle(0px at 50% -10%);
+        transition: .5s;
+    }
+
+    header .navbar.active {
+        clip-path: circle(900px at 100% -10%);
+    }
+
+    header .navbar a {
+        display: flex;
+        padding: 1.5rem;
+        margin: 1rem;
+        font-size: 2rem;
+        background: var(--red);
+    }
+}
+
+@media screen and (max-width:468px) {
+    html {
+        font-size: 50%;
+    }
+}
